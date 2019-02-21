@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages HAHAHA
+## Assignment 1 - Predicting PM 2.5
 
 You can use the [editor on GitHub](https://github.com/ntumlta2019/hw1/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
