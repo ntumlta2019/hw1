@@ -14,7 +14,7 @@ import csv
 <h3 id="read">Read in training set</h3> 
 
 ```python
-raw_data = np.genfromtxt(sys.argv[1], delimiter=',')
+raw_data = np.genfromtxt(sys.argv[1], delimiter=',') ## train.csv
 data = raw_data[1:,3:]
 where_are_NaNs = np.isnan(data)
 data[where_are_NaNs] = 0 
@@ -72,14 +72,14 @@ for T in range(10000):
     adagrad_sum += gradient ** 2
     w = w - learning_rate * gradient / (np.sqrt(adagrad_sum) + 0.0005)
 
-np.save('weight.npy',w) 
+np.save('weight.npy',w)     ## save weight
 ```
 
 <h3 id="Write file">Read in testing set</h3> 
 
 ```python
-w = np.load('weight.npy')
-test_raw_data = np.genfromtxt(sys.argv[2], delimiter=',')
+w = np.load('weight.npy')                                   ## load weight
+test_raw_data = np.genfromtxt(sys.argv[2], delimiter=',')   ## test.csv
 test_data = test_raw_data[:, 2: ]
 where_are_NaNs = np.isnan(test_data)
 test_data[where_are_NaNs] = 0 
